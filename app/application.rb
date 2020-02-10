@@ -26,9 +26,9 @@ class Application
       add_item = req.params["q"]
       if items.include(add_item)
         cart << add_item
-        resp.write "#{add_item.capitalize} added to cart"
+        resp.write "added #{add_item}"
       else
-        resp.write "Item Not Found"
+        resp.write "We don't have that item"
       end
     else
       resp.write "Path Not Found"
